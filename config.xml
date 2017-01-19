@@ -2,10 +2,10 @@
 <widget id="sk.rsnet.SuperCalc" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>SuperCalc</name>
     <description>
-        This is the project created from the template: cordova_template.
+        Super Calculator for students. Number of mathematical formulas from different disciplines. Conversions between units.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="vyvoj@rsnet.sk" href="https://vyvoj.rsnet.sk">
+        RSNET s.r.o.
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
@@ -23,4 +23,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <engine name="browser" spec="~4.1.0" />
 </widget>
