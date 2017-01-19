@@ -1,0 +1,16 @@
+# Node
+npm-debug.log
+/node_modules
+
+# Cordova
+/platforms
+/plugins
+
+# res
+resources/signing
+
+*.swp
+*.swo
+*.log
+*.DS_Store
+composer.lock
