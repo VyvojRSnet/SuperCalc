@@ -12,9 +12,12 @@ Slavoj SANTA Hruška
 
 Konzultanti:
 ============================
- - [Chemia](#chemia-konzultanti)
+ - [Chemia](#chemia-konzultanti) Vladimír Kurák
 
-Frekventanti:
+Frekventanti kurzu:
+============================
+
+Správcovia kategoórií:
 ============================
 
 --todo--
