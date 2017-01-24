@@ -1,4 +1,13 @@
-function TCatChem () {
+/**********************************************************************
+ ** Module:      Category - Electronic
+ ** Author/Date: Slavoj SANTA Hruska / 20170123
+ ** Objective:   Main Class for All Electronic categories
+ **********************************************************************
+ ** Author/Date: Authors name, YYYYMMDD
+ ** Changes:     Description of change (package interface changes only)
+ **********************************************************************/
+
+function TCatElectronic () {
 
     this.parent=null;
     this.name='Elektronika';
@@ -10,7 +19,9 @@ function TCatChem () {
         app.categories.register(this);
         app.logDebug(this.name+': Initialised');
 
-//	app.categories.loadCategory('chem/general','TCatChemGeneral',this);
+        app.variables.loadVariables('ele',this);
+
+//	app.categories.loadCategory('ele/general','TCatEleGeneral',this);
 
 	app.addCategoryToTopMenu(this);
     };

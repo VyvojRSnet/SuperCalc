@@ -16,6 +16,7 @@ function TCategories () {
 // Load known categories
 	this.loadCategory('math','TCatMath',null);
 	this.loadCategory('chem','TCatChem',null);
+	this.loadCategory('ele','TCatElectronic',null);
 
     };
 
@@ -37,5 +38,6 @@ function TCategories () {
     };
 
     this.register = function(category) {
+	app.categoryMenu.addChoice(category);
     };
 };

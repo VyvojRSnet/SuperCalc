@@ -8,14 +8,34 @@
  **********************************************************************/
 
 function TFormulas () {
-    // Categories Constructor
-    this.category = [];
+    var FormulaList = new Array();
+
     this.initialize = function() {
-	app.logInfo('Formulas loaded');
-//	this.register("");
+	app.logInfo('Formulas: '+'loaded');
+
+// Load known Formulas
+//	this.loadFormula('math','TCatMath',null);
+//	this.loadFormula('chem','TCatChem',null);
+
     };
+
+    this.loadFormula = function (dir, className,_parent){
+	app.loadJs(
+	    'formulas/'+dir+'/formula.js',
+	    function (){
+		app.logDebug('Loaded script '+dir+' with Class '+className);
+		eval('var _tmp_formula=new '+className+'();');
+		_tmp_formula.initialize(_parent);
+		FormulaList[className]=_tmp_formula;
+	    }
+	);
+    };
+
+
+    this.getFormulaList = function () {
+	return FormulaList;
+    };
+
     this.register = function(formula) {
     };
 };
-
-

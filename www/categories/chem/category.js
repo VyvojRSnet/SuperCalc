@@ -1,3 +1,12 @@
+/**********************************************************************
+ ** Module:      Category - Chemistry
+ ** Author/Date: Slavoj SANTA Hruska / 20170123
+ ** Objective:   Main Class for All Chemistry categories
+ **********************************************************************
+ ** Author/Date: Authors name, YYYYMMDD
+ ** Changes:     Description of change (package interface changes only)
+ **********************************************************************/
+
 function TCatChem () {
 
     this.parent=null;

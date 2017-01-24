@@ -17,6 +17,6 @@ function TCatMathTrigonometry () {
         this.parent=_parent;
         app.logDebug(this.parent.name+'->'+this.name+': Registering');
         app.categories.register(this);
-        app.logInfo(this.parent.name+'->'+this.name+': Initialised');
+        app.logDebug(this.parent.name+'->'+this.name+': Initialised');
     };
 };

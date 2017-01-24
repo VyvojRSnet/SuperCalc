@@ -12,10 +12,20 @@ var app = {
     // Application Constructor
     categories :  null,
     formulas : null,
+    variables : null,
     _debug : false,
 
     initialize: function() {
+
+	requirejs.config({
+	    "baseUrl": "js"
+	});
+
         this.logInfo('Boot: APP booted');
+        this.logInfo( "Variables: INIT!" );
+        this.variables = new TVariables();
+	this.variables.initialize();
+	this.logInfo( "Variables: DONE!" );
 
         this.logInfo( "Categories: INIT!" );
         this.categories = new TCategories();
@@ -27,7 +37,11 @@ var app = {
 	this.formulas.initialize();
 	this.logInfo( "Formulas: DONE!" );
 
-	this.mainMenu = new TMainMenu();
+        this.logInfo( "Category Menu: INIT!" );
+	this.categoryMenu = new TCategoryMenu();
+	this.categoryMenu.initialize();
+	this.categoryMenu.renderCategorySelector(null,false);
+	this.logInfo( "Category Menu: DONE!" );
 
         this.bindEvents();
     },
@@ -81,8 +95,25 @@ var app = {
 	$.getScript( script, fn );
     },
 
+    onTopMenuClick: function(who,what){
+	$('#app_content').fadeOut(500,function() {
+	    $('#myNavbar').collapse("hide");
+	    $('#app_content').empty();
+	    switch (what)
+	    {
+		case 'home':
+			app.categoryMenu.renderCategorySelector(null,true);
+			$('#app_content').fadeIn(500);
+			break;
+		default:
+			break;
+	    }
+	});
+    },
+
     addCategoryToTopMenu: function (whom){
     }
+
 };
 
 
