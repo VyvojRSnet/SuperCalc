@@ -26,7 +26,7 @@ function TCategories () {
 	    function (){
 		app.logDebug('Loaded script '+dir+' with Class '+className);
 		eval('var _tmp_cat=new '+className+'();');
-		_tmp_cat.initialize(_parent);
+		_tmp_cat.initialize(_parent,dir);
 		CategoryList[className]=_tmp_cat;
 	    }
 	);

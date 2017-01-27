@@ -21,17 +21,23 @@
   width: 100%;
   height: 100%;
   padding: 10px;
-  background: #428bca;
+  background: rgba(66,139,202,0.45); /*#428bca;*/
+  background-color: rgba(66,139,202,0.45); /*#428bca;*/
   border-radius: 50%;
-  border: 0;
+  border: 4;
   color: white;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.275);
+  visibility: visible;
+  -webkit-box-shadow: 0 9px 9px rgba(0, 0, 0, 0.275);
+  -moz-box-shadow: 0 9px 9px rgba(0, 0, 0, 0.275);
+  box-shadow: 0 9px 9px rgba(0, 0, 0, 0.275);
   transition: all .1s;
 }
 
-.menu_selector button:hover { background: #3071a9; }
+.menu_selector button:hover { 
+  background: rgba(66,139,202,0.55); /*  background: #3071a9;  */
+}
 
 .menu_selector button:focus { outline: none; }
 
@@ -63,19 +69,27 @@
   bottom: 100%;
   width: 0;
   height: 0;
-  line-height: 1px;
+/*  line-height: 1px; */
   margin-left: 0;
-  background: #fff;
+/*  background: #fff; */
   border-radius: 50%;
   text-align: center;
   font-size: 1px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: none;
+/*  box-shadow: none;*/
+  color: white;
+  border: 4px;
+  box-shadow: 0 9px 9px rgba(0, 0, 0, 0.275);
+  background: rgba(255,255,255,0.15); /*#428bca;*/
   transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.menu_selector li input + span:hover { background: #f0f0f0; }
+.menu_selector li input + span:hover {
+ background: #f0f0f0;
+  background: rgba(255,255,255,0.25); /*#428bca;*/
+
+ }
 
 .menu_selector li input:checked + span {
   background: #5cb85c;
@@ -85,11 +99,33 @@
 .menu_selector li input:checked + span:hover { background: #449d44; }
 
 .menu_selector.open li input + span {
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  margin-left: -40px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin-left: -50px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   
 }
+
+.menu_selector_bottomleft {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 18px;
+    text-align: left;
+     overflow: hidden;
+  cursor: pointer;
+
+  width: 250px;
+  height: 150px;
+
+  margin-bottom: -75px; 
+  margin-left: -125px;
+
+  background: rgba(66,139,202,0.45); /*#428bca;*/
+  border-radius: 50%;
+  border: 0;
+  color: white;
+}
+

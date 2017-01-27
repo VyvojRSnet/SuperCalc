@@ -12,9 +12,11 @@ function TCatElectronic () {
     this.parent=null;
     this.name='Elektronika';
     this.level=1;
+    this.dir='';
 
-    this.initialize = function(_parent) {
+    this.initialize = function(_parent,_dir) {
 	this.parent=_parent;
+        this.dir=_dir;
         app.logDebug(this.name+': Registering');
         app.categories.register(this);
         app.logDebug(this.name+': Initialised');
